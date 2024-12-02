@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorProject.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="10"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+            
+            <Entry
+                x:Name="EntryField"
+                Placeholder="LEBLEBİ"
+                Keyboard="Numeric"
+                Text=""
+                MaximumWidthRequest="315"
+                HorizontalTextAlignment="End"/>
+
+            <Grid ColumnSpacing="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnMS" Grid.Column="0" Text="MS" Clicked="btnMS_Clicked"
+                        BackgroundColor="#404040" TextColor="white"/>
+                <Button x:Name="btnMR" Grid.Column="1" Text="MR" Clicked="btnMR_Clicked"
+                        BackgroundColor="#404040" TextColor="white"/>
+            </Grid>
+
+
+            <Grid x:Name="GridArea"
+                  ColumnSpacing="5"
+                  RowSpacing="5">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="75"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="75"/>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="btnclearlast" Text="CE" Grid.Row="0" Grid.Column="0" 
+                        Grid.ColumnSpan="1" BackgroundColor="#404040" 
+                        TextColor="white" FontAttributes="Bold" Clicked="ClearLastClicked"/>
+                <Button x:Name="btnclearall" Text="C" Grid.Row="0" Grid.Column="1" 
+                        Grid.ColumnSpan="1" BackgroundColor="#404040" 
+                        TextColor="white" FontAttributes="Bold" Clicked="ClearClicked"/>
+                <Button x:Name="btndelete" Grid.Row="0" Grid.Column="2"
+                        BackgroundColor="#404040" ImageSource="nolurol.png" TextColor="white"
+                        FontAttributes="Bold" Clicked="DeleteClicked"/>
+                <Button x:Name="btndivide" Text="/" Grid.Row="0" Grid.Column="3"
+                        BackgroundColor="#404040" TextColor="white"
+                        FontAttributes="Bold" Clicked="btndivide_Clicked"/>
+
+                <Button x:Name="btn7" Text="7" Grid.Row="1" Grid.Column="0"
+                        BackgroundColor="dimgray" TextColor="white" Clicked="NumberClicked"/>
+                <Button x:Name="btn8" Text="8" Grid.Row="1" Grid.Column="1"
+                        BackgroundColor="dimgray" TextColor="white" Clicked="NumberClicked"/>
+                <Button x:Name="btn9" Text="9" Grid.Row="1" Grid.Column="2"
+                        BackgroundColor="dimgray" TextColor="white" Clicked="NumberClicked"/>
+                <Button x:Name="btnmultiply" Text="*" Grid.Row="1" Grid.Column="3"
+                        BackgroundColor="#404040" TextColor="white"
+                        FontAttributes="Bold" Clicked="btnmultiply_Clicked"/>
+
+                <Button x:Name="btn4" Text="4" Grid.Row="2" Grid.Column="0"
+                        BackgroundColor="dimGray" TextColor="white" Clicked="NumberClicked"/>
+                <Button x:Name="btn5" Text="5" Grid.Row="2" Grid.Column="1"
+                        BackgroundColor="dimGray" TextColor="white" Clicked="NumberClicked"/>
+                <Button x:Name="btn6" Text="6" Grid.Row="2" Grid.Column="2"
+                        BackgroundColor="dimGray" TextColor="White" Clicked="NumberClicked"/>
+                <Button x:Name="btnsub" Text="-" Grid.Row="2" Grid.Column="3"
+                        BackgroundColor="#404040" TextColor="White"
+                        FontAttributes="Bold" Clicked="btnsub_Clicked"/>
+
+                <Button x:Name="btn1" Text="1" Grid.Row="3" Grid.Column="0"
+                        BackgroundColor="dimgray" TextColor="white" Clicked="NumberClicked"/>
+                <Button x:Name="btn2" Text="2" Grid.Row="3" Grid.Column="1"
+                        BackgroundColor="dimgray" TextColor="white" Clicked="NumberClicked"/>
+                <Button x:Name="btn3" Text="3" Grid.Row="3" Grid.Column="2"
+                        BackgroundColor="dimGray" TextColor="white" Clicked="NumberClicked"/>
+                <Button x:Name="btnadd" Text="+" Grid.Row="3" Grid.Column="3"
+                        BackgroundColor="#404040" TextColor="white"
+                        FontAttributes="Bold" Clicked="btnadd_Clicked"/>
+
+                <Button x:Name="btnidk" Text="" Grid.Row="4" Grid.Column="0"
+                        BackgroundColor="dimgray" TextColor="white"/>
+                <Button x:Name="btn0" Text="0" Grid.Row="4" Grid.Column="1"
+                        BackgroundColor="DimGray" TextColor="white" Clicked="NumberClicked"/>
+                <Button x:Name="btndecimal" Text="," Grid.Row="4" Grid.Column="2"
+                        BackgroundColor="dimgray" TextColor="white" Clicked="DecimalClicked"/>
+                <Button x:Name="btnequal" Text="=" Grid.Row="4" Grid.Column="3"
+                        BackgroundColor="DarkOrange" TextColor="white" 
+                        FontAttributes="Bold" Clicked="btnequal_Clicked"/>
+            </Grid>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
